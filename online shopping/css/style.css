@@ -1,0 +1,345 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+* ::before,
+* ::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(242, 242, 242);
+}
+
+.container {
+    width: 1300px;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.main-header {
+    background-color: rgb(232, 237, 238);
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav_list_item {
+    position: relative;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    list-style: none;
+    padding: 18px 30px;
+    transition: ease-in-out 0.3s;
+}
+
+.nav_list_item::before {
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: 0px;
+    width: 1px;
+    height: 55px;
+    background-color: rgb(184, 184, 184);
+}
+
+.main-header .nav_list_item:hover {
+    background-color: rgb(222, 222, 228);
+    box-shadow: 0px 3px 10px -5px black;
+}
+
+.svg_icon {
+    padding-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.nav_list_item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    /* color: black; */
+}
+
+.logo {
+    width: 350px;
+    height: 77px;
+}
+
+.logo img {
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 200px;
+    height: 75px;
+    text-align: center;
+}
+
+
+/* slider style */
+
+
+/* .shop-banner .container {
+    display: block;
+    width: 1322px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.shop-banner a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+
+.shop-title {
+    padding: 30px 35px;
+    background-color: #3179ce;
+    width: 570px;
+    position: absolute;
+    bottom: 152px;
+    z-index: 3;
+}
+
+.shop-title {
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.shop_svg-icon {
+    fill: #fff;
+    padding-top: 12px;
+}
+
+.shop-title h2 {
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 10px!important;
+    display: block;
+} */
+
+.slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.slider__control {
+    position: absolute;
+    top: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    opacity: 0.5;
+    height: 50px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, .5);
+}
+
+.slider__control_show {
+    display: flex;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+}
+
+.slider__control_left {
+    left: 0;
+}
+
+.slider__control_right {
+    right: 0;
+}
+
+.slider__control::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.slider__control_left::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_right::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.slider__item>div {
+    line-height: 250px;
+    font-size: 100px;
+    text-align: center;
+}
+
+
+/* page-shop style */
+
+.page-shop .container {
+    display: block;
+    width: 1322px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-shop .container,
+.top-row ::before,
+ ::after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.page-shop {
+    display: block;
+    background-color: #ebeef2;
+    background-color: rgb(235, 238, 242);
+}
+
+.top-row {
+    display: block;
+    height: 72px;
+    background-color: #fff;
+}
+
+aside {
+    width: 25%;
+    float: left;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.categorys {
+    display: inline-block;
+    width: 95%;
+    background-color: #303741;
+    padding: 0 15px;
+    position: relative;
+    top: -45px;
+}
+
+.select-box__categorys {
+    color: white;
+    display: block;
+    padding: 25px 106px 25px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #414750;
+}
+
+.select-box__categorys:hover,
+.select-box__categorys.active {
+    color: #3179ce;
+}
+
+.shop-links {
+    width: 75%;
+    float: left;
+    padding-bottom: 60px;
+}
+
+.shop-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+.links__for-shop-page {
+    width: 33.33333333%;
+    min-height: 1px;
+    float: left;
+}
+
+.item {
+    display: block;
+    background-color: #fff;
+    background-clip: content-box;
+    padding: 30px 15px;
+    padding-bottom: 0;
+}
+
+.links-names {
+    width: 100%;
+    padding: 25px 25px 25px 60px;
+    background-position: 36px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    position: relative;
+}
+
+.links-names:hover {
+    color: #3179ce;
+}
+
+
+/* footer */
+
+.footer {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    padding-top: 30px;
+    height: 160px;
+    background-color: #242424;
+}
+.footer .main-nav {
+    justify-content: space-between;
+    color: rgb(189, 189, 189);
+}
+.footer_fonts {
+    color: rgb(189, 189, 189);
+}
+.footer_fonts .svg_icon {
+    fill: rgb(201, 201, 201);
+}
+#copyright {
+    text-transform: none;
+    font-size: 13px;
+}
