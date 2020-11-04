@@ -1,0 +1,47 @@
+.sign-in_wrap{
+    text-align: center;
+    background-color: rgb(201, 220, 228);
+}
+ .aftorizaciya {
+     padding-top: 40px;
+     text-transform: uppercase;
+ }
+.form {
+    margin: 40px; 
+    padding: 50px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.input {
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(234, 241, 245);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.btn-sign-in {
+    width: 300px;
+    height: 50px;
+    background-color: #3179CE;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
+    outline: none;
+}
+.btn-sign-in:hover{
+    background-color: #1263C0;
+} 
+.forget_pass{ 
+    padding-top: 40px;
+
+}
