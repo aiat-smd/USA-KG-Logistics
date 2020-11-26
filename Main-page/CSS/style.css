@@ -18,6 +18,7 @@ a {
     color: black;
 }
 body{
+    min-width: 320px;
     margin: 0px;
     padding: 0px;
     background-color: rgb(232, 238, 241);
@@ -92,11 +93,41 @@ body{
     height: 50px;
     background-color: rgb(25, 4, 82);
 }
-.buttons{
+/* .buttons{
     display: flex;
     align-items: center;
     float: right;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+
+@media(min-width: 320px){
+    .buttons{
+        width: 320px;
+        float: none;
+        align-items: center;
+        padding-top: 10px;
+        font-size: 14px;
+        /* margin-left: 50px; */
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 768px){
+    .buttons{
+        max-width: 768px;
+        float: none;
+        align-items: center;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media(min-width: 1170px){
+    .buttons{
+        display: flex;
+        align-items: center;
+        float: right;
+    }
 }
 .authorize {
     font-family: 'Raleway', sans-serif;
